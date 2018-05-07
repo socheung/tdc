@@ -1,0 +1,7 @@
+CFLAGS += -Wall
+CFLAGS += -g
+#CFLAGS += -O2
+
+!cc = |> g++ $(CFLAGS) -c %f -o %o |> ./build/%B.o
+!ln = |> g++ $(LFLAGS) %f -o %o |>
+!ar = |> ar crs %o %f |>

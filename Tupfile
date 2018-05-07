@@ -1,0 +1,4 @@
+include_rules
+preload ./src
+: foreach ./src/*.cpp | ./src/*.h |> !cc |>
+: ./build/*.o |> !ln |> ./build/test.exe
