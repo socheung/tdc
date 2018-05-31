@@ -15,7 +15,7 @@ Build by script.
 .\build.sh
 ```
 
-Or, use Tup to build
+Or, use Tup to build.
 ```
 tup init
 tup

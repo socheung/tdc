@@ -1,7 +1,13 @@
 #pragma once
 
+#ifndef TDC_SORTVEC_H
+#define TDC_SORTVEC_H
+
 #include <vector>
-#include <algorithm>
+#include <utility>
+
+// tdc namespace
+namespace tdc {
 
 template <class T, class C = std::less<T>>
 void bubbleSort(std::vector<T>& ary)
@@ -204,3 +210,7 @@ void mergeSort(std::vector<T>& ary)
 	if (ary.size() < 2) return;
 	mergeSortSplit<T,C>(ary, 0, ary.size() - 1);
 }
+
+};	// end of tdc
+
+#endif // TDC_SORTVEC_H

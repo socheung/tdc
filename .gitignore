@@ -3,6 +3,7 @@
 .vscode
 .tup
 build/**
+old/**
 
 # Prerequisites
 *.d
@@ -36,3 +37,10 @@ build/**
 *.exe
 *.out
 *.app
+/.vs
+/Debug
+/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0
+/Release
+/x64/Debug
+/tdcTest/Debug
+/tdcTest/x64/Debug

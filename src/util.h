@@ -1,7 +1,13 @@
 #pragma once
 
+#ifndef TDC_UTIL_H
+#define TDC_UTIL_H
+
 #include <iostream>
 #include <vector>
+#include "list.h"
+
+namespace tdc {
 
 // show output of vector
 template<class T>
@@ -14,14 +20,18 @@ std::ostream& operator<< (std::ostream& os, const std::vector<T>& v)
 	return os;
 }
 
-// test vector value equal
+// show output of list
 template<class T>
-bool vectorIsEqual(const std::vector<T>& a, const std::vector<T>& b)
+std::ostream& operator<< (std::ostream& os, const tdc::List<T>& list)
 {
-	if (a.size() != b.size())
-		return false;
-	for (size_t i = 0; i < a.size(); i++)
-		if (a[i] != b[i])
-			return false;
-	return true;
+	int i = 0;
+	os << "L" << list.size() << "[";
+	for (auto v : list)
+		os << (i++ ? "," : "") << v;
+	os << "]";
+	return os;
 }
+
+};	// end of tdc
+
+#endif // TDC_UTIL_H
